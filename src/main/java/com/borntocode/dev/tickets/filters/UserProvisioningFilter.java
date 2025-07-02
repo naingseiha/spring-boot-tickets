@@ -1,6 +1,6 @@
 package com.borntocode.dev.tickets.filters;
 
-import com.borntocode.dev.tickets.domain.User;
+import com.borntocode.dev.tickets.domain.entities.User;
 import com.borntocode.dev.tickets.repositories.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
