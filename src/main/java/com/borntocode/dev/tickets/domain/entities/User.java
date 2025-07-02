@@ -1,4 +1,4 @@
-package com.borntocode.dev.tickets.domain;
+package com.borntocode.dev.tickets.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.*;

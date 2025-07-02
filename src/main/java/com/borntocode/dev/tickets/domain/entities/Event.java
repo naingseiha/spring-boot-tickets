@@ -1,4 +1,4 @@
-package com.borntocode.dev.tickets.domain;
+package com.borntocode.dev.tickets.domain.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -35,7 +35,7 @@ public class Event {
     private LocalDateTime end;
 
     @Column(name = "venue", nullable = false)
-    private String venu;
+    private String venue;
 
     @Column(name = "sales_start")
     private LocalDateTime salesStart;
@@ -72,11 +72,11 @@ public class Event {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Event event = (Event) o;
-        return Objects.equals(id, event.id) && Objects.equals(name, event.name) && Objects.equals(start, event.start) && Objects.equals(end, event.end) && Objects.equals(venu, event.venu) && Objects.equals(salesStart, event.salesStart) && Objects.equals(salesEnd, event.salesEnd) && status == event.status && Objects.equals(createdAt, event.createdAt) && Objects.equals(updatedAt, event.updatedAt);
+        return Objects.equals(id, event.id) && Objects.equals(name, event.name) && Objects.equals(start, event.start) && Objects.equals(end, event.end) && Objects.equals(venue, event.venue) && Objects.equals(salesStart, event.salesStart) && Objects.equals(salesEnd, event.salesEnd) && status == event.status && Objects.equals(createdAt, event.createdAt) && Objects.equals(updatedAt, event.updatedAt);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, start, end, venu, salesStart, salesEnd, status, createdAt, updatedAt);
+        return Objects.hash(id, name, start, end, venue, salesStart, salesEnd, status, createdAt, updatedAt);
     }
 }
